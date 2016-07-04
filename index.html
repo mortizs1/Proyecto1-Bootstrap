@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="/scripts/jquery.min.js"></script>
+  <script src="/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   <title>e-commerce</title>
 </head>
@@ -15,7 +18,7 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">
-          <img src="images/hola.png" alt="logo" style="width:140px; ">
+          <span class="glyphicon glyphicon-tag" aria-hidden="true"></span> E-commerce
         </a>
       </div>
         <ul class="nav navbar-nav navbar-right">
@@ -36,19 +39,34 @@
         </div>
           <br>
           <h4>Categorías</h4>
-            <div class="menuu">
-              <ul class="nav nav-pills nav-stacked ">
-                <li role="presentation" class="active"><a href="#">Todos<span class="badge">100</span></a></li>
-                <li role="presentation"><a href="#">Hombre<span class="badge">100</span></a></li>
-                <li role="presentation"><a href="#">Mujer<span class="badge">42</span></a></li>
-                <li role="presentation"><a href="#">Hipster<span class="badge">20</span></a></li>
-                <li role="presentation"><a href="#">Metal<span class="badge">36</span></a></li>
-                <li role="presentation"><a href="#">Universidad<span class="badge">13</span></a></li>
-                <li role="presentation"><a href="#">Deportiva<span class="badge">10</span></a></li>
-                <li role="presentation"><a href="#">Rayas<span class="badge">3</span></a></li>
-                <li role="presentation"><a href="#">Apretada<span class="badge">6</span></a></li>
-              </ul>
-            </div>
+
+          <a href="#" class="list-group-item active">
+            Todos <span class="badge">100</span>
+          </a>
+          <a href="#" class="list-group-item">
+            Hombre <span class="badge">100</span>
+          </a>
+          <a href="#" class="list-group-item">
+            Mujer <span class="badge">42</span>
+          </a>
+          <a href="#" class="list-group-item">
+            Hipster <span class="badge">20</span>
+          </a>
+          <a href="#" class="list-group-item">
+            Metal <span class="badge">14</span>
+          </a>
+          <a href="#" class="list-group-item">
+            Universidad <span class="badge">36</span>
+          </a>
+          <a href="#" class="list-group-item">
+            Deportiva <span class="badge">13</span>
+          </a>
+          <a href="#" class="list-group-item">
+            Rayas <span class="badge">10</span>
+          </a>
+          <a href="#" class="list-group-item">
+            Apretada <span class="badge">3</span>
+          </a>
       </div>
       <div class="col-lg-9">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -88,7 +106,77 @@
             <div class="caption">
               <h3>Hipster Ultimate</h3>
               <p>Camiseta ideal para Hipster</p>
-              <p><a href="#" class="btn btn-primary" role="button">$229 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a> <a  href="#myModal" class="btn btn-default" role="button" data-toggle="modal">Detalles</a></p>
+              <p><a href="#" class="btn btn-primary" role="button">$229 <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                 <a  href="#myModal" class="btn btn-default" role="button" data-toggle="modal" data-target="#myModal">Detalles</a></p>
+
+
+
+                  <!-- Modal -->
+                  <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Hipster Ultimate.</h4>
+                        </div>
+                        <div class="modal-body">
+                          <div class="alert alert-info" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            Lo sentimos este producto está agotado
+                          </div>
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-sm-3">
+                                <img src="images/camiseta-1.jpg" alt="camiseta1" style="border:1px solid grey;">
+                              </div>
+                              <div class="col-sm-9">
+                                <p><strong>Precio:</strong> $239 COP</p>
+                                <p><strong>Calificación:</strong>
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                  <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                                </p>
+                                <strong>Categoria:</strong>
+                                <span class="label label-primary">Hipster</span> <span class="label label-warning">Deportiva</span>
+                                <br>
+                                <br>
+                                 <a href=""><span class="glyphicon glyphicon-heart" aria-hidden="true"></span> Agrega a los deseos</a>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                             <div class="col-xs-12">
+                                <ul id="myTab" class="nav nav-tabs">
+                                   <li class="active"><a href="#home" data-target="#home, #home_else" data-toggle="tab">Descripción</a></li>
+                                      <li><a href="#profile" data-target="#profile, #profile_else" data-toggle="tab">Comentarios</a> </li>
+                                </ul>
+                                <div id="myTabContent2" class="tab-content">
+                                   <div class="tab-pane fade in active" id="home_else">
+                                      <p>Perfecta para salir un Viernes con tus amigos, disfruta de la calidad con la que cuenta <br> esta camisa 100% algodon.</p>
+                                   </div>
+                                   <div class="tab-pane fade" id="profile_else">
+                                      <div class="panel panel-default">
+                                          <div class="panel-heading">comentario1</div>
+                                          <div class="panel-body">comentario2</div>
+                                       </div>
+                                       <textarea class="form-control" rows="3" placeholder="Ingresa tu comentario."></textarea>
+                                    </div>
+                                 </div>
+                               </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
 
             </div>
           </div>
@@ -137,25 +225,6 @@
     </div>
   </div>
 
-  <div id="myModal" class="modal fade" role="dialog">
-<div class="modal-dialog">
-
-<!-- Modal content-->
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal">&times;</button>
-<h4 class="modal-title">Modal Header</h4>
-</div>
-<div class="modal-body">
-<p>Some text in the modal.</p>
-</div>
-<div class="modal-footer">
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-</div>
-</div>
-
-</div>
-</div>
 
 
 </body>
