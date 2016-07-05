@@ -1,7 +1,6 @@
 html{
   background-color: whitesmoke;
   font-family: 'Lato', Arial sans-serif;
-
 }
 
 #nav{
@@ -19,11 +18,6 @@ html{
 
 #productos #cuadrado{
 	margin-bottom: 20px;
-}
-
-#comenydes {
-	margin: 12px 0;
-
 }
 
 @media(min-width: 768px){
